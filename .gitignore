@@ -1,0 +1,10 @@
+*.log
+*.out
+*.pyc
+*.swp
+.DS_Store
+.idea
+.opt-in
+.opt-out
+.vscode
+tmp
