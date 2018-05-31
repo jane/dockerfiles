@@ -1,7 +1,7 @@
 # vim: ft=dockerfile
+FROM mhart/alpine-node:8
 LABEL repo="janedev/base-dev"
 LABEL maintainer="zac@zacanger.com"
-FROM mhart/alpine-node:8
 RUN apk update && \
     apk upgrade && \
     apk --no-cache add curl tzdata ca-certificates wget && \
