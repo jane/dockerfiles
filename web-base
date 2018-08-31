@@ -1,5 +1,5 @@
 # vim: ft=dockerfile
-FROM mhart/alpine-node:8
+FROM mhart/alpine-node:10
 LABEL repo="janedev/base-dev"
 LABEL maintainer="zac@zacanger.com"
 RUN apk update && \
@@ -7,8 +7,5 @@ RUN apk update && \
     apk --no-cache add curl tzdata ca-certificates wget && \
     mv /usr/share/zoneinfo/America/Denver /etc/localtime && \
     echo "America/Denver" > /etc/timezone && \
-    apk del tzdata && \
-    wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/sgerrand/alpine-pkg-glibc/master/sgerrand.rsa.pub && \
-    wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.26-r0/glibc-2.26-r0.apk && \
-    apk add glibc-2.26-r0.apk
+    apk del tzdata
 ENV TERM=xterm-256color
