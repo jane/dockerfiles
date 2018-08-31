@@ -7,5 +7,8 @@ RUN apk update && \
     apk --no-cache add curl tzdata ca-certificates wget && \
     mv /usr/share/zoneinfo/America/Denver /etc/localtime && \
     echo "America/Denver" > /etc/timezone && \
-    apk del tzdata
+    apk del tzdata && \
+    wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
+    wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.28-r0/glibc-2.28-r0.apk && \
+    apk add glibc-2.28-r0.apk
 ENV TERM=xterm-256color
