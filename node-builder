@@ -1,5 +1,7 @@
 # vim: ft=dockerfile
-FROM mhart/alpine-node:8 as builder
+FROM mhart/alpine-node:8
+LABEL repo="janedev/node-builder"
+LABEL maintainer="zac@zacanger.com"
 RUN apk add --update \
     g++ \
     git \
