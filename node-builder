@@ -1,6 +1,5 @@
 # vim: ft=dockerfile
 FROM mhart/alpine-node:8 as builder
-WORKDIR /app
 RUN apk add --update \
     g++ \
     git \
