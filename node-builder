@@ -2,7 +2,8 @@
 FROM mhart/alpine-node:8
 LABEL repo="janedev/node-builder"
 LABEL maintainer="zac@zacanger.com"
-RUN apk add --update \
+# hadolint ignore=DL3018
+RUN apk add --no-cache \
     g++ \
     git \
     make \
