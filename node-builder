@@ -1,5 +1,5 @@
 # vim: ft=dockerfile
-FROM mhart/alpine-node:8
+FROM mhart/alpine-node:10
 LABEL repo="janedev/node-builder"
 LABEL maintainer="zac@zacanger.com"
 # hadolint ignore=DL3018
@@ -8,5 +8,8 @@ RUN apk add --no-cache \
     git \
     make \
     python2 \
-    tzdata
+    tzdata && \
+    wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
+    wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.28-r0/glibc-2.28-r0.apk && \
+    apk add --no-cache glibc-2.28-r0.apk
 ENV term xterm
