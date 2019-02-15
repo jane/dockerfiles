@@ -6,6 +6,6 @@ To push changes (assuming you have access to Jane on Docker Hub) do something
 like:
 
 ```bash
-docker build -t janedev/base-dev:2.0.0 -f base-dev .
-docker push janedev/base-dev:2.0.0
+docker build -t janedev/node-base:2.0.0 -f node-base .
+docker push janedev/node-base:2.0.0
 ```

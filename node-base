@@ -1,9 +1,17 @@
 # vim: ft=dockerfile
 FROM mhart/alpine-node:10
-LABEL repo="janedev/base-dev"
+LABEL repo="janedev/node-builder"
 LABEL maintainer="zac@zacanger.com"
 # hadolint ignore=DL3018
-RUN apk add --no-cache curl tzdata ca-certificates wget && \
+RUN apk add --no-cache \
+    ca-certificates \
+    curl \
+    g++ \
+    git \
+    make \
+    python2 \
+    tzdata \
+    wget && \
     mv /usr/share/zoneinfo/America/Denver /etc/localtime && \
     echo "America/Denver" > /etc/timezone && \
     apk del tzdata && \
