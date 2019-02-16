@@ -1,6 +1,6 @@
 # vim: ft=dockerfile
 FROM mhart/alpine-node:10
-LABEL repo="janedev/node-builder"
+LABEL repo="janedev/node-base"
 LABEL maintainer="zac@zacanger.com"
 # hadolint ignore=DL3018
 RUN apk add --no-cache \
