@@ -1,4 +1,3 @@
-# vim: ft=dockerfile
 FROM mhart/alpine-node:10
 LABEL repo="janedev/node-base"
 LABEL maintainer="zac@zacanger.com"
@@ -19,3 +18,5 @@ RUN apk add --no-cache \
     wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.28-r0/glibc-2.28-r0.apk && \
     apk add --no-cache glibc-2.28-r0.apk
 ENV TERM xterm-256color
+
+# vim: ft=dockerfile

@@ -1,4 +1,3 @@
-# vim: ft=dockerfile
 FROM jwilder/nginx-proxy:alpine
 LABEL repo="janedev/nginx-proxy-dev"
 LABEL maintainer="zac@zacanger.com"
@@ -8,3 +7,5 @@ RUN { \
       echo 'proxy_buffers 4 2m;'; \
       echo 'proxy_busy_buffers_size 2m;'; \
     } > /etc/nginx/conf.d/proxy_settings.conf
+
+# vim: ft=dockerfile
