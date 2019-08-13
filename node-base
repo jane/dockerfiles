@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:10
+FROM node:10-alpine
 LABEL repo="janedev/node-base"
 LABEL maintainer="zac@zacanger.com"
 # hadolint ignore=DL3018
