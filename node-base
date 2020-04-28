@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:12-alpine
 LABEL repo="janedev/node-base"
 LABEL maintainer="zac@zacanger.com"
 # hadolint ignore=DL3018
