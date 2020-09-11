@@ -9,11 +9,7 @@ RUN apk add --no-cache \
     git \
     make \
     python2 \
-    tzdata \
-    wget && \
-    mv /usr/share/zoneinfo/America/Denver /etc/localtime && \
-    echo "America/Denver" > /etc/timezone && \
-    apk del tzdata
+    wget
 ENV TERM xterm-256color
 
 # vim: ft=dockerfile
