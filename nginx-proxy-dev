@@ -1,6 +1,5 @@
 FROM jwilder/nginx-proxy:alpine
 LABEL repo="janedev/nginx-proxy-dev"
-LABEL maintainer="zac@zacanger.com"
 RUN { \
       echo 'client_max_body_size 50m;'; \
       echo 'proxy_buffer_size 1m;'; \
