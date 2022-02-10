@@ -1,4 +1,4 @@
-FROM jwilder/nginx-proxy:alpine
+FROM nginxproxy/nginx-proxy:alpine
 LABEL repo="janedev/nginx-proxy-dev"
 RUN { \
       echo 'client_max_body_size 50m;'; \
