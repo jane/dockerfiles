@@ -1,4 +1,4 @@
-FROM node:14-alpine
+FROM node:16-alpine
 LABEL repo="janedev/node-base"
 # hadolint ignore=DL3018
 RUN apk add --no-cache \
